@@ -1,0 +1,60 @@
+h1 a , h2 a {
+    color: #1a0c69;
+}
+
+body {
+    margin: 0px; /*ページ周囲の余白を削除*/
+    background-color: #ff9900;
+}
+
+#page {
+    padding-bottom: 10px;
+    background-color: #dbf7ff;
+}
+
+#page-header {
+    background-color: #ffcfa1;
+}
+
+#siteTitle {
+    font-size: 30px;
+    background-color: #ff9900;
+    line-height: 2;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#siteTitle a {
+    color: #ffffff;
+}
+
+#catchcopy {
+    font-size: 15px;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.post {
+    margin: 10px;
+    padding-left: 10px;
+    background-color: #c8beff;
+}
+
+/*
+.post h2 {
+    margin: 0px;
+    padding: 0px;
+    background-color: #482be9;
+}
+
+.post h2 a {
+    background-color: #7361da;
+}
+
+.date {
+    margin-bottom: 0px;
+    background-color: #b6aee0;
+}
+*/
+
