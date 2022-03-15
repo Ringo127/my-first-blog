@@ -1,42 +1,40 @@
 h2 {
-    color: #b10000;
-    font-size: 30px;
+    color: #7a4d4d;
 }
 
-a {
-    color: #b10000;
+h2 a {
+    color: #7a4d4d;
 }
 
 a:hover {
     color: #b10000b0;
 }
 
-
 body {
+    font-family: "MS Pゴシック" ;/* サイト全体のフォント指定 */
     margin: 0px; /*ページ周囲の余白を削除*/
-    background-color: #D2EEFD;
 }
 
 #page {
-    background-color: #D2EEFD;
+    /*background-color: #D2EEFD;*/
 }
 
 #page-header {
     background-color: #ffffff;
+    margin: 0px;
 }
 
 #page-header .globalNavi {
-    border: solid #000000;
+    background-color: #D4EBD7;;
+    border: solid #9b8d8d;
     border-width: 1px 0;
     padding: 10px 0;
     
 }
 
 #page-header .globalNavi ul {
-    margin: 0;
     padding: 0;
     text-align: center;
-    width: 980px;
     margin: 0 auto;
 }
 
@@ -52,9 +50,21 @@ body {
     float: left;
 }
 
+#page-header .globalNavi ul li a{
+    color: #4e3232;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+#page-header .globalNavi ul li a:hover{
+    background-color: #ffcb9a;
+    display: block;
+}
+
 #page-body {
-    width: 980px;
-    margin: 0 auto;
+    margin: 20px 30px;
 }
 
 #siteTitle {
@@ -66,7 +76,7 @@ body {
 }
 
 #siteTitle a {
-    color: #E9D0D2;
+    color: #7a4d4d;
     text-decoration: none;
 }
 
@@ -80,12 +90,15 @@ body {
     border-top: solid 1px #000000;
     margin-top: 15px;
     padding-left: 10px;
+    background-color: #D4EBD7;
 }
 
 .post {
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: #ffffff;
+    border-bottom: solid 1px #4e3232;
 }
 
 .date {
@@ -96,7 +109,4 @@ body {
     margin-top: 50px;
 }
 
-.blog-title {
-    border-bottom: solid 2px #ff0000;
-}
 
