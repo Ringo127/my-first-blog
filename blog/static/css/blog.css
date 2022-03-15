@@ -11,7 +11,7 @@ a:hover {
 }
 
 body {
-    font-family: "MS Pゴシック" ;/* サイト全体のフォント指定 */
+    font-family: "sans-serif" ;/* サイト全体のフォント指定 */
     margin: 0px; /*ページ周囲の余白を削除*/
 }
 
