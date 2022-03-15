@@ -1,31 +1,73 @@
-h1 a , h2 a {
-    color: #1a0c69;
+h2 {
+    color: #b10000;
+    font-size: 30px;
 }
+
+a {
+    color: #b10000;
+}
+
+a:hover {
+    color: #b10000b0;
+}
+
 
 body {
     margin: 0px; /*ページ周囲の余白を削除*/
-    background-color: #ff9900;
+    background-color: #D2EEFD;
 }
 
 #page {
-    padding-bottom: 10px;
-    background-color: #dbf7ff;
+    background-color: #D2EEFD;
 }
 
 #page-header {
-    background-color: #ffcfa1;
+    background-color: #ffffff;
+}
+
+#page-header .globalNavi {
+    border: solid #000000;
+    border-width: 1px 0;
+    padding: 10px 0;
+    
+}
+
+#page-header .globalNavi ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 980px;
+    margin: 0 auto;
+}
+
+#page-header .globalNavi ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#page-header .globalNavi ul li {
+    list-style: none;
+    width: 245px;
+    float: left;
+}
+
+#page-body {
+    width: 980px;
+    margin: 0 auto;
 }
 
 #siteTitle {
+    margin: 0px;
     font-size: 30px;
-    background-color: #ff9900;
     line-height: 2;
     margin-bottom: 0;
     text-align: center;
 }
 
 #siteTitle a {
-    color: #ffffff;
+    color: #E9D0D2;
+    text-decoration: none;
 }
 
 #catchcopy {
@@ -34,27 +76,27 @@ body {
     text-align: center;
 }
 
+#page-footer {
+    border-top: solid 1px #000000;
+    margin-top: 15px;
+    padding-left: 10px;
+}
 
 .post {
-    margin: 10px;
     padding-left: 10px;
-    background-color: #c8beff;
-}
-
-/*
-.post h2 {
-    margin: 0px;
-    padding: 0px;
-    background-color: #482be9;
-}
-
-.post h2 a {
-    background-color: #7361da;
+    padding-right: 10px;
+    background-color: #ffffff;
 }
 
 .date {
-    margin-bottom: 0px;
-    background-color: #b6aee0;
+    font-size: 15px;
 }
-*/
+
+#detail {
+    margin-top: 50px;
+}
+
+.blog-title {
+    border-bottom: solid 2px #ff0000;
+}
 

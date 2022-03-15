@@ -3,8 +3,6 @@
 <html>
     <head>
         <title>Ringo's blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
@@ -15,17 +13,29 @@
                     <a href="{% url 'post_new' %}" class="top-menu">新しく投稿する</span></a>
                 {% endif %}
                 <h1 id="siteTitle"><a href="/">りんごのぶろぐ</a></h1>
-                <p id="catchcopy">色々書いたり書かなかったり</p>
+                <p id="catchcopy">生物学とプログラミングの勉強をしてます。</p>
+                <nav class="globalNavi">
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/">BLOG</a></li>
+                        <li><a href="/">工事中①</a></li>
+                        <li><a href="/">工事中②</a></li>
+                    </ul>
+                </nav>
             </div>
             
-            <div class="page-body">
+            
+            <div id="page-body">
                 {% block content %}
                 {% endblock %}
             </div>
-        </div>
 
-        <div id ="page-footer">
-
+            {% block next %}
+            {% endblock %}
+            
+            <div id ="page-footer">
+                <p id="copyright">Copyright&copy; 2022 @りんごのぶろぐ All Right Reserved.</p>
+            </div>
         </div>
     </body>
 
