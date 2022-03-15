@@ -3,12 +3,15 @@
 <html>
     <head>
         <title>Ringo's blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
     <body>
         <div id="page">
             <div id="page-header">
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                 <h1 id="siteTitle"><a href="/">りんごのぶろぐ</a></h1>
                 <p id="catchcopy">色々書いたり書かなかったり</p>
             </div>
