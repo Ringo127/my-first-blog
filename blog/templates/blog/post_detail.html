@@ -13,10 +13,19 @@
         {% endif %}
         <p id="detail">{{ post.text|linebreaksbr }}</p>
     </div>
-{% endblock %}
 
-{% block next %}
     <div class="next-page">
-        <a href="{% url 'post_detail' pk=post.pk %}">次のページ</a>
+        {% with prev=post.get_previous_by_create_date %}
+            {% if prev %}
+                <a href="{% url 'post_detail' pk=prev.pk %}">◀️前の記事</a>
+            {% endif %}
+        {% endwith %}
+
+        {% with next=post.get_next_by_create_date %}
+            {% if next %}
+                <a href="{% url 'post_detail' pk=next.pk %}">次の記事▶️</a>
+            {% endif %}
+        {% endwith %}
     </div>
+
 {% endblock %}
