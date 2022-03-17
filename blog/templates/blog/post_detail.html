@@ -11,7 +11,7 @@
                 {{ post.published_date }}
             </div>
         {% endif %}
-        <p id="detail">{{ post.text|linebreaksbr }}</p>
+        <p id="detail">{{ post.text|safe }}</p>
     </div>
 
     <div class="next-page">

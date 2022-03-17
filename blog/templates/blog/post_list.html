@@ -7,7 +7,7 @@
                 <p>投稿日:{{ post.create_date|date:"Y/m/d" }} (更新日:{{ post.published_date|date:"Y/m/d" }})</p>
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|truncatechars:40 }}</p>
+            <p>{{ post.text|striptags|escape|truncatechars:40 }}</p>
         </div>
     {% endfor %}
 {% endblock %}
