@@ -22,7 +22,8 @@ body {
 }
 
 #page {
-    /*background-color: #D2EEFD;*/
+    width: 980px;
+    margin: 0 auto;
 }
 
 #page-header {
@@ -69,10 +70,6 @@ body {
     display: block;
 }
 
-#page-body {
-    margin: 20px 30px;
-}
-
 #siteTitle {
     margin: 0px;
     font-size: 30px;
@@ -85,6 +82,31 @@ body {
     color: #7a4d4d;
     text-decoration: none;
 }
+
+
+#page-body {
+    width: 980px;
+    margin: 0 auto;
+}
+
+/*ページボディ*/
+#page-body:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#page-body-main {
+    width: 720px;
+    float: left;
+}
+
+#page-body-sub {
+    width: 220px;
+    float: right;
+}
+
+
 
 #catchcopy {
     font-size: 15px;

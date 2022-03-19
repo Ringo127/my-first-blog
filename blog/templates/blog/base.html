@@ -26,8 +26,28 @@
             
             
             <div id="page-body">
-                {% block content %}
-                {% endblock %}
+                <div id="page-body-main">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+
+                <div id="page-body-sub">
+                    <section class="new-list">
+                        <h2>お知らせ</h2>
+                        <ul>
+                            <li><time datetime="2022-03-19">2022.3.19</time>ブログを開設しました。</li>
+                            <li><time datetime="2022-03-19">2022.3.19</time>テスト。</li>
+                        </ul>
+                    </section>
+
+                    <section class="profile">
+                        <h2>プロフィール</h2>
+                        <ul>
+                            <li>りんご</li>
+                            <li>大学生</li>
+                        </ul>
+                    </section>
+                </div>
             </div>
             
             <div id ="page-footer">
