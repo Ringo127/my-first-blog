@@ -1,14 +1,14 @@
 {% extends 'blog/base.html' %}
 
 {% block content %} 
-    <h2>ブログ</h2>           
-    {% for post in posts %}
-        <div class="post">
+    <h2>記事一覧</h2>           
+    {% for article in articles %}
+        <div class="article">
             <div class="date">
                 <p>投稿日:{{ post.create_date|date:"Y/m/d" }} (更新日:{{ post.published_date|date:"Y/m/d" }})</p>
             </div>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|striptags|escape|truncatechars:40 }}</p>
+            <h2><a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h2>
+            <p>{{ article.text|striptags|escape|truncatechars:40 }}</p>
         </div>
     {% endfor %}
 {% endblock %}

@@ -2,12 +2,15 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from .models import Post
+from .models import Article
 from .forms import PostForm
 
+def home(request):
+    return render(request, 'blog/home.html')
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'blog/post_list.html', {'posts' : posts})
+    return render(request, 'blog/post_list.html', {'posts' : posts}) #renderは第２引数を表示する、第3引数でデータを渡せる
 
 
 def post_detail(request, pk):
@@ -40,3 +43,7 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def article_list(request):
+    articles = Article.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'blog/article_list.html', {'articles' : articles}) #renderは第２引数を表示する、第3引数でデータを渡せる

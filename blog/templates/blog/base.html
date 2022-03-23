@@ -10,14 +10,14 @@
         <div id="page">
             <div id="page-header">
                 {% if user.is_authenticated %}
-                    <a href="{% url 'post_new' %}" class="top-menu">新しく投稿する</span></a>
+                    <a href="{% url 'post_new' %}" class="top-menu"><span>新しく投稿する</span></a>
                 {% endif %}
                 <h1 id="siteTitle"><a href="/">りんごのぶろぐ</a></h1>
                 <p id="catchcopy">生物学とプログラミングの勉強をしてます。</p>
                 <nav class="globalNavi">
                     <ul>
-                        <li><a href="/">HOME</a></li>
-                        <li><a href="/">BLOG</a></li>
+                        <li><a href="{% url 'post_list' %}">BLOG</a></li>
+                        <li><a href="{% url 'article_list' %}">Article</a></li>
                         <li><a href="/">工事中①</a></li>
                         <li><a href="/">工事中②</a></li>
                     </ul>
@@ -35,8 +35,8 @@
                     <section class="new-list">
                         <h2>お知らせ</h2>
                         <ul>
-                            <li><time datetime="2022-03-19">2022.3.19</time>ブログを開設しました。</li>
-                            <li><time datetime="2022-03-19">2022.3.19</time>テスト。</li>
+                            <li><time datetime="2022-03-19">2022.3.19</time><br>ブログを開設しました。</li>
+                            <li><time datetime="2022-03-19">2022.3.19</time><br>テスト。</li>
                         </ul>
                     </section>
 
@@ -44,7 +44,7 @@
                         <h2>プロフィール</h2>
                         <ul>
                             <li>りんご</li>
-                            <li>大学生</li>
+                            <li>大学4年生</li>
                         </ul>
                     </section>
                 </div>
