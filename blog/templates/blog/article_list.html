@@ -1,11 +1,15 @@
 {% extends 'blog/base.html' %}
 
 {% block content %} 
+    {% if user.is_authenticated %}
+        <a href="{% url 'article_new' %}" class="top-menu"><span>新しく投稿する</span></a>
+    {% endif %}
+
     <h2>記事一覧</h2>           
     {% for article in articles %}
         <div class="article">
             <div class="date">
-                <p>投稿日:{{ post.create_date|date:"Y/m/d" }} (更新日:{{ post.published_date|date:"Y/m/d" }})</p>
+                <p>投稿日:{{ article.create_date|date:"Y/m/d" }} (更新日:{{ post.published_date|date:"Y/m/d" }})</p>
             </div>
             <h2><a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h2>
             <p>{{ article.text|striptags|escape|truncatechars:40 }}</p>

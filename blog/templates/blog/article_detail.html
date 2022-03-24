@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'article_edit' pk=article.pk %}">記事を修正する</a>
+        {% endif %}
+        <h2 class="blog-title">{{ article.title }}</h2>
+        {% if article.published_date %}
+            <div class="date">
+                {{ article.published_date }}
+            </div>
+        {% endif %}
+        <dive>
+            <img src="{{ article.image.url }}"><br> <!--.urlが必要らしい！-->
+            {{ article.image.url }}
+        </dive>
+        <p id="detail">{{ article.text|safe }}</p>
+    </div>
+
+    <div class="next-page">
+        {% with prev=article.get_previous_by_create_date %}
+            {% if prev %}
+                <a href="{% url 'article_detail' pk=prev.pk %}">◀️前の記事</a>
+            {% endif %}
+        {% endwith %}
+
+        {% with next=article.get_next_by_create_date %}
+            {% if next %}
+                <a href="{% url 'article_detail' pk=next.pk %}">次の記事▶️</a>
+            {% endif %}
+        {% endwith %}
+    </div>
+{% endblock %}

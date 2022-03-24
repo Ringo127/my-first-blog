@@ -29,6 +29,8 @@ body {
 #page-header {
     background-color: #ffffff;
     margin: 0px;
+    position: relative;
+
 }
 
 #page-header .globalNavi {
@@ -71,8 +73,8 @@ body {
 }
 
 #siteTitle {
-    margin: 0px;
     font-size: 30px;
+    padding-top: 5px;
     line-height: 2;
     margin-bottom: 0;
     text-align: center;
@@ -83,6 +85,13 @@ body {
     text-decoration: none;
 }
 
+#title-logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 250px;
+}
 
 #page-body {
     width: 980px;
