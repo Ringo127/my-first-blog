@@ -11,11 +11,13 @@
                 {{ article.published_date }}
             </div>
         {% endif %}
-        <dive>
-            <img src="{{ article.image.url }}"><br> <!--.urlが必要らしい！-->
-            {{ article.image.url }}
-        </dive>
-        <p id="detail">{{ article.text|safe }}</p>
+        <!--imageが登録されている場合、表示する-->
+        {% if article.image %}
+            <dive>
+                <img src="{{ article.image.url }}"><br> <!--.urlが必要らしい！-->
+            </dive>
+        {% endif %}
+        <div id="detail">{{ article.text|safe }}</div>
     </div>
 
     <div class="next-page">
@@ -32,3 +34,5 @@
         {% endwith %}
     </div>
 {% endblock %}
+
+

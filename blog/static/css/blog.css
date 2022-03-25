@@ -142,8 +142,18 @@ body {
     font-size: 15px;
 }
 
+/** articleの設定 **/
 #detail {
     margin-top: 50px;
 }
+
+#detail h2 {
+    padding: 1rem 1rem;
+    border-left: 5px solid #000;
+    background: #f4f4f4;
+    color: #4e3232
+}
+
+
 
 
